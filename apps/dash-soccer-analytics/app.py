@@ -403,7 +403,8 @@ def radar_graph(radar_file, team):
 def game_simulation_graph(n_clicks, speed, filename):
     speed_adjusted = speed * 100
     game_speed = 600 - speed_adjusted
-    fig = fig_from_json("data/" + filename)
+    #fig = fig_from_json("data/" + filename)
+    fig = fig_from_json("" + filename)
     fig.update_layout(margin=dict(l=0, r=20, b=0, t=0))
     fig.update_layout(newshape=dict(line_color="#009BFF"))
     fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = game_speed

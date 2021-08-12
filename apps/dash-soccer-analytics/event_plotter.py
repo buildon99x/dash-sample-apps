@@ -275,7 +275,9 @@ def find_progressive_passes(df):
 # Main function - graph all football events which occur in a match
 def plotEvents(eventType, filename, team, team_on_left):
     # Read in event csv data file
-    data_file = "data/" + filename
+    #//data_file = "data/" + filename
+    print("plotEvents():filename="+filename)
+    data_file = filename
     events_df = pd.read_csv(data_file)
     events_df = events_df.loc[events_df["Team"] == team]
     events_df.reset_index(drop=True, inplace=True)
